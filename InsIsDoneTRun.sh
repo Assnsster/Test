@@ -4,7 +4,8 @@ chmod 666 /dev/kvm
 if [ ! -d ~/vps ]
 then
 mkdir ~/vps
-elif [ ! -d ~/vps
+elif [ ! -f compose.yml ]
+then
 wget -q https://raw.githubusercontent.com/Assnsster/Test/main/compose.yml -O ~/vps/compose.yml
 fi
 cd ~/vps
