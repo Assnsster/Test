@@ -1,5 +1,5 @@
-pkill -f tailscaled
-pkill -f tailscale
+pkill tailscaled
+pkill tailscale
 chmod 666 /dev/kvm
 if [ ! -d ~/vps ]
 then
@@ -47,6 +47,8 @@ echo
 tailscale up
 }
 case $1 in
-   tailscale) installtailscale
-   ngrok) installngrok
+   tailscale) tailscaleins;;
+   ngrok) installngrok;;
+   *)tailscaleins;;
+   esac
 docker compose up
