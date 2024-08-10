@@ -29,7 +29,7 @@ echo """3389) Remote Desktop - RDP [Connect if Windows start ]
 read -p " PORT: " Pos
 nohup ./ngrok tcp $Pos &>/dev/null &
 echo Start Ngrok...
-sleep 6
+sleep 6 
 echo "Your ngrok Address:"
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
 }
