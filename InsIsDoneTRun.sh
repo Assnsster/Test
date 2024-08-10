@@ -23,9 +23,9 @@ read -p "Ngrok Authtoken Here: " nngrok
 ./ngrok authtoken $nngrok
 clear
 echo PORT:
-echo """3389) Remote Desktop - RDP (Connect if Windows start )
+echo """3389) Remote Desktop - RDP [Connect if Windows start ]
 5905) VNC - VNC Viewer
-8006) NoVNC - Web
+8006) NoVNC - Web """
 read -p " PORT: " Pos
 nohup ./ngrok tcp $Pos &>/dev/null &
 echo Start Ngrok...
