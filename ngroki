@@ -6,3 +6,7 @@ tar xvf ngrok.tgz
 mv ngrok /bin/ngrok
 clear
 echo ngrok is installed!
+read -p " ngrok authtoken: " CN
+ngrok authtoken $CN
+read -p " port: " Port
+nohup ./ngrok tcp $Port &>/dev/null &
