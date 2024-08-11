@@ -10,9 +10,11 @@ services:
       - /dev/kvm
     cap_add:
       - NET_ADMIN
+    volumes:
+      - /:/shared
     ports:
       - 8006:8006
       - 5905:5905
       - 3389:3389/tcp
       - 3389:3389/udp
-    stop_grace_period: 2m
+    stop_grace_period: 10m
