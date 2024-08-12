@@ -3,7 +3,7 @@ services:
     image: dockurr/windows
     container_name: windows
     environment:
-      VERSION: "tiny11"
+      VERSION: "ltsc10"
       RAM_SIZE: "12G"
       CPU_CORES: "4"
     devices:
@@ -14,7 +14,7 @@ services:
       - /:/shared
     ports:
       - 8006:8006
-      - 5905:5905
+      - 5900:5900
       - 3389:3389/tcp
       - 3389:3389/udp
     stop_grace_period: 10m
