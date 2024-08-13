@@ -1,0 +1,14 @@
+name: test
+
+on: 
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: tester
+        run: |
+          ls /dev
+          lscpu
+          free -h
+          df -h
