@@ -4,7 +4,7 @@ services:
     container_name: windows
     environment:
       VERSION: "ltsc10"
-      RAM_SIZE: "12G"
+      RAM_SIZE: "13G"
       CPU_CORES: "4"
     devices:
       - /dev/kvm
@@ -13,7 +13,7 @@ services:
     volumes:
       - /:/shared
     ports:
-      - 8006:8006
+      - 8080:8080
       - 5900:5900
       - 3389:3389/tcp
       - 3389:3389/udp
