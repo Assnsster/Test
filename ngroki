@@ -1,12 +1,6 @@
 rm -f ./ngrok
 rm -f ./ngrok.tgz
-rm -f /bin/ngrok.tgz
-wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz -O ngrok.tgz
-tar xvf ngrok.tgz
-mv ngrok /bin/ngrok
-clear
+rm -f /bin/ngrok
+wget -q https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz -O ngrok.tgz
+tar -xvf ngrok.tgz -C /bin
 echo ngrok is installed!
-read -p " ngrok authtoken: " CN
-ngrok authtoken $CN
-read -p " port: " Port
-nohup ./ngrok tcp $Port &>/dev/null &
