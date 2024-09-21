@@ -1,6 +1,0 @@
-curl -fsSL https://tailscale.com/install.sh | sh
-echo "tailscale is install"
-tailscaled --state=tailscaled.state &
-clear
-echo
-tailscale up
