@@ -1,6 +1,0 @@
-rm -f ./ngrok
-rm -f ./ngrok.tgz
-rm -f /bin/ngrok
-wget -q https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz -O ngrok.tgz
-tar -xvf ngrok.tgz -C /bin
-echo ngrok is installed!
