@@ -2,8 +2,11 @@ echo -ne "|#**| [1/3] Running apt update\r"
 sudo apt update -y >/dev/null 2>&1
 echo -ne "|##*| [2/3] Running apt install qemu-kvm \r"
 sudo apt install qemu-kvm -y >/dev/null 2>&1
+if [ ! -f win2025.vhd ]
+then
 echo -ne "|##*| [3/3] Install Windows Image [From Windows Server] \n"
 wget "https://go.microsoft.com/fwlink/?linkid=2268774&clcid=0x409&culture=en-us&country=us" -q --show-progress -O win2025.vhd
+fi
 clear
 echo "Windows Server 2025 IS running on port 5900[VNC]"
-kvm -cpu host,+topoext,hv_relaxed,hv_spinlocks=0x1fff,hv-passthrough,+pae,+nx,kvm=on,+svm -smp 4,cores=3 -M q35,usb=on -device usb-tablet -m 10G -device virtio-balloon-pci -vga virtio -net nic,netdev=n0,model=virtio-net-pci -netdev user,id=n0,hostfwd=tcp::3389-:3389 -boot c -device virtio-serial-pci -device virtio-rng-pci -enable-kvm -drive file=win2025.vhd,format=raw,if=none,id=nvme0 -device nvme,drive=nvme0,serial=deadbeaf1,num_queues=8 -monitor stdio -vnc :0 -boot c
+kvm -cpu host,+topoext,hv_relaxed,hv_spinlocks=0x1fff,hv-passthrough,+pae,+nx,kvm=on,+svm -smp 4,cores=3 -M q35,usb=on -device usb-tablet -m 10G -device virtio-balloon-pci -vga virtio -net nic,netdev=n0,model=virtio-net-pci -netdev user,id=n0,hostfwd=tcp::3389-:3389 -device virtio-serial-pci -device virtio-rng-pci -enable-kvm -drive file=win2025.vhd,format=raw,if=none,id=nvme0 -device nvme,drive=nvme0,serial=deadbeaf1,num_queues=8 -monitor stdio -vnc :0 -boot c
