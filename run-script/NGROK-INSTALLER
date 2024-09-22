@@ -2,5 +2,5 @@ rm -f ngrok.tgz 2>/dev/null
 rm -f /bin/ngrok 2>/dev/null
 wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz -q -O ngrok.tgz
 tar -xf ngrok.tgz -C $PREFIX/bin/
-rm -f ngrok.tgz 2>/dev/null
+rm -f ngrok.tgz 2>/dev/null || "echo Fail To download!; exit"
 echo "ngrok has been download!"
