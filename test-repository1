@@ -1,5 +1,5 @@
 case $@ in
 "hello-world")echo "Hello-World!";;
-"ngrokinstall") curl https://raw.githubusercontent.com/Assnsster/Test/refs/heads/main/run-script/NGROK-INSTALLER |bash 2>/dev/null ;;
+"ngrokinstall") curl https://raw.githubusercontent.com/Assnsster/Test/refs/heads/main/run-script/NGROK-INSTALLER |bash ;;
 *) echo "not found code repo run!";;
 esac
