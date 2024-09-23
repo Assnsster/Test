@@ -9,7 +9,7 @@ jobs:
       - name: tester
         run: |
           sudo mkdir /sdc
-          sudo mount /dev/sdc1 /sdc
           sudo ls /sdc
           lsblk
           df -h
+          sudo mount /dev/sdc1 /sdc
