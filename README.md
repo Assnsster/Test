@@ -2,7 +2,7 @@
 ```bash
 sudo curl https://raw.githubusercontent.com/Assnsster/Test/refs/heads/main/RepoRun |bash
 ```
-# Hoặc
+### Hoặc
 ```bash
 wget https://raw.githubusercontent.com/Assnsster/Test/refs/heads/main/RepoRun -O /bin/reporun; chmod +x /bin/reporun
 ```
