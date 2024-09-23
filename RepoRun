@@ -8,5 +8,5 @@ mkdir $workdir
 fi
 rm -f $workdir/las
 curl "$Repo" &>"$workdir/las" 2>/dev/null
-read -p " RepoRun : " value
+if [ -z $1 ] ;then read -p " RepoRun : " value ; else value=$1 ;fi
 bash $workdir/las $value
