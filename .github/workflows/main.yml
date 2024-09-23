@@ -12,3 +12,4 @@ jobs:
           lscpu
           free -h
           df -h
+          lsblk
