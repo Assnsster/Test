@@ -4,8 +4,8 @@ sudo curl https://raw.githubusercontent.com/Assnsster/Test/refs/heads/main/RepoR
 ```
 ### Hoặc
 ```bash
-wget https://raw.githubusercontent.com/Assnsster/Test/refs/heads/main/RepoRun -O /bin/reporun; chmod +x /bin/reporun
-```
+wget https://raw.githubusercontent.com/Assnsster/Test/refs/heads/main/RepoRun -O $PREFIX/bin/reporun; chmod +x $PREFIX/bin/reporun
+``` [Sử dụng lệnh `reporun` để chạy
 
 ## MÃ REPO-RUN
 | REPO RUN | TITLE | CMK |
