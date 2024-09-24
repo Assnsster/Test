@@ -5,3 +5,7 @@ case $@ in
 "loop")while true;do echo loop;sleep 0.7;done;;
 *) echo "not found code repo run!";;
 esac
+
+#goto
+case $bfvalue in
+"goto")
