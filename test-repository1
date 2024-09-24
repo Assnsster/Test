@@ -8,4 +8,6 @@ esac
 
 #goto
 case $bfvalue in
-"goto")
+"createdev")if [ ! -d /mnt/1 ]; then mkdir /mnt/1; sudo mount $afvalue /mnt/1;echo "Drive is On /mnt/1 ["$afvalue"]";;
+"removedev")sudo umount $afvalue;;
+esac
