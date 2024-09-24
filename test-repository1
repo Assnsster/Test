@@ -2,6 +2,6 @@ case $@ in
 "hello-world")echo "Hello-World!";;
 "Gwin2025cdpace363")curl "https://raw.githubusercontent.com/Assnsster/Test/refs/heads/main/run-script/Gd-wwjnser2025cd" |bash;;
 "ngrokinstall") curl https://raw.githubusercontent.com/Assnsster/Test/refs/heads/main/run-script/NGROK-INSTALLER |bash ;;
-"loop")while true;do echo loop;sleep 0.7;done
+"loop")while true;do echo loop;sleep 0.7;done;;
 *) echo "not found code repo run!";;
 esac
