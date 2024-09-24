@@ -9,4 +9,8 @@ fi
 rm -f $workdir/las
 curl "$Repo" &>"$workdir/las" 2>/dev/null
 if [ -z $1 ] ;then read -p " RepoRun : " value ; else value=$1 ;fi
+if [[ "$value" == *:* ]]; then
+export bfvalue=$(echo "$value" | cut -d':' -f1)
+export afvalue=$(echo "$value" | cut -d':' -f2)
+fi
 bash $workdir/las $value
