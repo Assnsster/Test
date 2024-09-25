@@ -9,6 +9,8 @@ jobs:
       - name: tester
         run: |
           ls /dev
+          mkdir sd
+          mount sdb1 ./sd
           lscpu
           free -h
           df -h
