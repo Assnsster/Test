@@ -10,7 +10,7 @@ jobs:
         run: |
           ls /dev
           mkdir sd
-          sudo mount sdb1 ./sd
+          sudo mount /dev/sdb1 ./sd
           lscpu
           free -h
           df -h
