@@ -1,0 +1,16 @@
+# Kho chính (Main), Restricted, Universe, Multiverse
+deb http://archive.ubuntu.com/ubuntu lunar main restricted universe multiverse
+deb-src http://archive.ubuntu.com/ubuntu lunar main restricted universe multiverse
+
+# Cập nhật bảo mật
+deb http://security.ubuntu.com/ubuntu lunar-security main restricted universe multiverse
+deb-src http://security.ubuntu.com/ubuntu lunar-security main restricted universe multiverse
+
+# Cập nhật phần mềm
+deb http://archive.ubuntu.com/ubuntu lunar-updates main restricted universe multiverse
+deb-src http://archive.ubuntu.com/ubuntu lunar-updates main restricted universe multiverse
+
+# Cập nhật ngược (Backports)
+deb http://archive.ubuntu.com/ubuntu lunar-backports main restricted universe multiverse
+deb-src http://archive.ubuntu.com/ubuntu lunar-backports main restricted universe multiverse
+
